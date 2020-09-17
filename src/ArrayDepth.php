@@ -43,7 +43,7 @@ class ArrayDepth
               if(is_array($v)){
                 $types[]=gettype($v);
                 self::typesof($v,false);
-
+              }
               else{
                 $types[]=gettype($v);
               }
