@@ -4,7 +4,7 @@ namespace HersonCruz\ArrayDepth;
 class ArrayDepth
 {
 
-        public function  array_in($array){
+        public static function  array_in($array){
             if(is_array($array)){
                 foreach($array as $val){
                     if(is_array($val)) return true;
