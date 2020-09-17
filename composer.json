@@ -2,7 +2,7 @@
     "name": "hersoncruz/array_depth",
     "description": "Get the depth of an array.",
     "type": "library",
-    "license": "GPLv3",
+    "license": "GPL-3.0+",
     "authors": [
         {
             "name": "Akpe Aurelle Emmanuel Moïse Zinsou",
