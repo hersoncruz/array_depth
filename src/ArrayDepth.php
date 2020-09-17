@@ -20,10 +20,10 @@ class ArrayDepth
             $i=1;
           }
           if(is_array($array)){
-            if($this->array_in($array)){
+            if(self::array_in($array)){
               $i++;
               foreach($array as $v){
-                if($this->array_in($v)) {
+                if(self::array_in($v)) {
                   self::epth($v,false);
                 }
               }
