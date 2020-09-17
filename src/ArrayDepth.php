@@ -3,27 +3,27 @@ namespace HersonCruz\ArrayDepth;
 
 class ArrayDepth
 {
+
+        public function  array_in($array){
+            if(is_array($array)){
+                foreach($array as $val){
+                    if(is_array($val)) return true;
+                }
+            }
+            return false;
+        }
+
         /*return array depth (level of interleaving) */
         public static function epth($array,$reset=true){
-          if(!function_exists('array_in')){
-            function  array_in($array){
-              if(is_array($array)){
-                foreach($array as $val){
-                  if(is_array($val)) return true;
-                }
-              }
-              return false;
-            }
-          }
           static $i=1;
           if($reset) {
             $i=1;
           }
           if(is_array($array)){
-            if(array_in($array)){
+            if($this->array_in($array)){
               $i++;
               foreach($array as $v){
-                if(array_in($v)) {
+                if($this->array_in($v)) {
                   self::epth($v,false);
                 }
               }
